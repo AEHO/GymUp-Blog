@@ -1,9 +1,10 @@
+==========
 Gymup Blog
 ==========
 
 Description
 -----------
-Blog generated w/ nikola.
+Simple webblog made with nikola - blog.gymup.com.br
 
 Generation instructions
 -----------
