@@ -1,0 +1,61 @@
+//Navbar
+
+$bgDefault      : $background0;
+$bgHighlight    : $base3;
+$colDefault     : $base0;
+$colHighlight   : $base1;
+.navbar-inverse {
+  background-color: $bgDefault;
+  border-color: $bgHighlight;
+  box-shadow: 0 1px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px rgba(0,0,0,0.1);
+  .navbar-brand {
+  	@include transition(all, 0.3s, ease-in-out);
+    color: $colDefault;
+    &:hover, &:focus { 
+      color: $colHighlight;
+      text-shadow: 1px 2px rgba(255,255,255,0.2);}}
+  .navbar-text {
+    color: $colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+      	@include transition(all, 0.3s, ease-in-out);
+        color: $colDefault;
+        &:hover,  &:focus {
+          color: $colHighlight;
+          text-shadow: 1px 2px rgba(255,255,255,0.2)}}}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover, &:focus {
+      background-color: $bgHighlight; }
+    .icon-bar {
+      background-color: $colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault; }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-inverse .navbar-nav .open .dropdown-menu {
+    > li > a {
+      @include transition(all, 0.3s, ease-in-out);
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+    > .active {
+    	@include transition(all, 0.3s, ease-in-out);
+      > a, > a:hover, > a:focus, {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+}
